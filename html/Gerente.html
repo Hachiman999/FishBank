@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerente</title>
+
+    <link rel="stylesheet" href="/css/Gerente.css" type="text/css" />
+    <link rel="stylesheet" href="/css/timer.css" type="text/css" />
+    <link rel="stylesheet" href="/css/chat.css" type="text/css" />
+    <link rel="stylesheet" href="/css/tabla.css" type="text/css" />
+    <link rel="stylesheet" href="/css/menu.css" type="text/css" />
+    <link rel="stylesheet" href="/css/dropdown.css" type="text/css"/>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ["Element", "Density", { role: "style" }],
+                ["Copper", 8.94, "#b87333"],
+                ["Silver", 10.49, "silver"],
+                ["Gold", 19.30, "gold"],
+                ["Platinum", 21.45, "color: #e5e4e2"]
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                title: "Density of Precious Metals, in g/cm^3",
+                width: 600,
+                height: 400,
+                bar: { groupWidth: "95%" },
+                legend: { position: "none" },
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(view, options);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <!--aqui va el header-->
+    <header class="encabezado">
+        <img class="uao-2" src="/imagenes/UAO2.svg">
+        <img class="usericon" src="/imagenes/user.svg">
+        <p> </p> <!-- OJO!!!   AQUI TIENE QUE IR EL NOMBRE Y EL CARGO!!-->
+
+        <a class="sesionIcon" href="/html/index.html"> <img src="/imagenes/Cerrar sesión.svg"></a>
+    </header>
+
+    <!--aqui comienza la parte de los iconos-->
+    <div class="icono">
+        <div class="sub-icono">
+            <div class="wrapflex-tempo">
+                <div class="timeIcon">
+                    <img class="time" src="/imagenes/clock.svg">
+                </div>
+                <div class="tiempo">
+                    <label id="minutes">00</label>
+                    <label id="colon">:</label>
+                    <label id="seconds">00</label>
+                </div>
+            </div>
+            <div class="wrapflex-dinero">
+                <div class="moneyIcon">
+                    <img class="money" src="/imagenes/money.svg">
+                </div>
+                <div>
+                    <label id=dinero>$500</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="vertical" style="float:right;">
+        <ul>
+            <li>
+                <a href="#" class="principal">EQUIPO AMARILLO</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <div class="flexwrap-dropmoney">
+                        <li><a href="#">Dinero</a></li>
+                        <li><a href="#" class="dropmoney">$300</a></li>
+                    </div>
+                    <!--Dropdown 1.1-->
+                    <li><a href="#" class="Flota">Flota</a>
+                        <ul>
+                            <li><a href="#">Mecanico</a></li>
+                            <li><a href="#">Puerto</a></li>
+                            <li><a href="#">Zona Costera</a></li>
+                            <li><a href="#">Altamar</a></li>
+                        </ul>
+                    </li>
+                    <!--Dropdown 1.2-->
+                    <li><a href="#" class="Inversiones">Inversiones</a>
+                        <ul>
+                            <li><a href="#">Subasta Cerrada</a></li>
+                            <li><a href="#">Subasta Abierto</a></li>
+                            <li><a href="#">Envíos al Mecánico</a></li>
+                            <li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ranking</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+
+
+
+    <!--aqui comienza la tabla-->
+    <div class="informacion">
+        <div class="Titulo">
+            <label>Datos Generales</label>
+        </div>
+
+        <div class="flexwrap-equipo">
+            <label class="equipo">Equipo</label>
+
+        </div>
+
+        <div class="tabla">
+            <table>
+                <tr>
+                    <th>Años</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+
+                </tr>
+                <tr>
+                    <th>Capturas de altamar</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Capturas de zona costera</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Barcos enviados a altamar</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Barcos enviados a zona costera</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Barcos en puerto</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Barcos en taller</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Flota utilizada en operación</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Flota después de subastas</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Balance bancario</th>
+                    <td>100</td>
+                    <td>150</td>
+                    <td>170</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--aqui va la grafica-->
+    <div id="columnchart_values" class="chart" style="width: 900px; height: 300px;"></div>
+
+    <!--aqui va el chat-->
+    <div id="chat-container">
+        <div id="chat-window">
+            <div id="output"></div>
+            <div id="actions"></div>
+        </div>
+        <input type="chat" id="username" placeholder="Username">
+        <input type="chat" id="message" placeholder="Envía un mensaje...">
+        <button id="send">send</button>
+    </div>
+
+    <!--aqui va el sidemenu-->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <p>Solicitar subasta</p>
+
+        <label class="tipoBarco">Zona Costera</label>
+        <input type="number" class="cantidadTotal" placeholder=" " />
+
+        <img src="/imagenes/yate.svg">
+        <input type="number" class="Costa-1" placeholer=" " />
+
+    </div>
+
+    <div id="main">
+        <button class="openbtn" onclick="openNav()"><img class="mas" src="/imagenes/más.svg"></button>
+
+    </div>
+
+    <div></div>
+
+    <script src="/javascript/menu.js" charset="utf-8"></script>
+    <script src="/javascript/chat.js" charset="utf-8"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script src="/javascript/timer.js" charset="utf-8"></script>
+</body>
+
+</html>

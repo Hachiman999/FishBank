@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mecanico</title>
+    <link rel="stylesheet" href="CSSMecanico.css" type="text/css" />
+  </head>
+  <body>
+
+    <div><!--inicio del header-->
+        <ul>
+            <li><h1>UAO</h1></li>
+            <li><img src="E:\FISHBANK\Imagenes\RecursosWEB\user.svg" /></li>
+            <li><p>Nicolás López <br> <small><strong>Mecanico</strong></small> </p></li>
+            <li><a  href="index.html">Cerrar sesión</a></li>
+        </ul>
+    </div><!--fin del header-->
+
+    <div class="icono"><!--inicio de indicadores (tiempo y dinero)-->
+        <div class="sub-icono">
+            <div class="wrapflex-tempo">
+                <div class="timeIcon">
+                    <img class="time" src="E:\FISHBANK\Imagenes\RecursosWEB\IndicadorTiempo.svg">
+                </div>
+                <div class="tiempo">
+                    <label id="minutes">00</label>
+                    <label id="colon">:</label>
+                    <label id="seconds">00</label>
+                </div>
+            </div>
+            <div class="wrapflex-dinero">
+                <div class="moneyIcon">
+                    <img class="money" src="E:\FISHBANK\Imagenes\RecursosWEB\IndicadorDinero.svg">
+                </div>
+                <div class="dinero">
+                    <label id=dinero>$500</label>
+                </div>
+            </div>
+        </div>
+    </div><!--fin de indicadores (tiempo y dinero)-->
+    
+    <div class="ContenedorMejoras"><!--inicio de mejoras-->
+            <div class="Fila">
+                    <div class="img Barco"><img id="Barco" src="E:\FISHBANK\Imagenes\RecursosWEB\BarcoMejoras.svg" /><p>Barco</p></div>
+                    <div class="img Almacenamiento"><a href="#"><img id="Almacenamiento" src="E:\FISHBANK\Imagenes\RecursosWEB\Almacenamiento.svg" /></a><p>Almacenamiento</p></div>
+                    <div class="img Motor"><img id="Motor" src="E:\FISHBANK\Imagenes\RecursosWEB\Motor.svg" /><p>Motor</p></div>
+                    <div class="img Gas"><img id="Gas" src="E:\FISHBANK\Imagenes\RecursosWEB\Gas.svg" /><p>Gas</p></div>
+                    <div class="img Redes"><img id="Redes" src="E:\FISHBANK\Imagenes\RecursosWEB\Redes.svg" /><p>Redes</p></div>
+                    <div class="img Pagar"><button id="Pagar">Pagar</button></div><!--<a id="Pagar" href="#"><p>Pagar</p></a>-->
+
+                    <div class="img Mejoras">
+                        <button class="MejorasBtn">Flota</button>
+                        <div class="ContenidoMejoras">
+                            <a id="Mejoras" href="#">Costera</a>
+                            <a id="Mejoras" href="#">Altamar</a>
+                        </div>
+                    </div>
+            </div>
+        </div><!--inicio de mejoras-->
+    <script src="Pagina/Mecanico.js"></script>
+    <script src="Pagina/Tiempo.js"></script>
+  </body>
+</html>

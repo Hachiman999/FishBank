@@ -1,0 +1,83 @@
+body{
+    background: rgba(0, 0, 0, .75);
+}
+
+header{
+    background: #006EB8;
+    display: flex;
+    flex: wrap;
+    margin: -10px -10px 0px -10px;
+    height: 84px;
+}
+
+.uao-2{
+    max-width:180px;
+    max-height:50px;
+}
+
+
+.sesionIcon{
+    margin: 0px 0px 0px 900px;
+    height: 90px;
+    width: auto;
+}
+
+.sub-icono{
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+
+    height: 70px;
+    width: auto;
+}
+
+.wrapflex-tempo{
+    background: #fff;
+    display: flex;
+    flex: wrap;
+    margin: 10px 10px -10px -50px;
+    padding: 10px 10px 10px 40px;
+
+}
+
+.timeIcon{
+    background: #F0D0B4;
+    margin: -10px 10px -10px -40px;
+}
+
+.time{
+    height: 68px;
+    width: auto;
+}
+
+.tiempo{
+    justify-content: center;
+    margin: 8px;
+}
+
+.wrapflex-dinero{
+    background: #fff;
+    display:flex;
+    flex: wrap;
+    margin: 10px 100px -10px 0px;
+    padding: 10px 110px 10px 0px;
+}
+
+.moneyIcon{
+    background: #DAEAEF;
+    margin: -10px 10px -10px 0px
+}
+
+.money{
+    height: 64px;
+    width: auto;
+    margin: 10px 0px 10px 0px;
+}
+
+.Titulo{
+    margin: 40px 0px 10px 0px;
+}
+
+
