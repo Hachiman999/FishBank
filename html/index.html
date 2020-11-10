@@ -74,6 +74,29 @@
         </main>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+//axios es un fech pero mejor funciona de una manera mas limpia
+//el ejemplo es para el metodo post
+//donde esta http://localhost:8080/ cambialo por tu url de la api
+// la parte { var1, var2 } cambialo por la variables que vas a mandar
+
+
+         axios.post('http://localhost:8080/',{ var1, var2 }).then(respuesta => {
+    if(respuesta.statusText === "OK" ){
+        //si se resibe una respuesta se consigue el objeto respuesta
+        //respuesta.data es la informacion de respuesta que te da la api
+      console.log(respuesta.data);
+      
+    }else{
+      console.log("error la api no esta prendida o se fue el internet ")
+    }
+    
+}).catch(error => {
+    console.error(error);
+})
+    </script>
+
 </body>
 
 </html>
